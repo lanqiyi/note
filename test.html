@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel ="stylesheet" type ="text/css" href ="css/app1.css" media ="all"> 
 	<meta charset ="utf-8">
 	<title>记事本</title>
-	<!--<link rel ="stylesheet" type ="text/css" href ="css/app1.css" media ="all"> -->
-	<!--<link rel ="stylesheet" type ="text/css" href ="css/text.css" media ="all">-->
-	<!--<script type ="text/javascript" src ="js/myFunction.js"> </script> -->
 </head>
 <body>
 	<!--<script type ="text/javascript" src ="js/cga.js"> </script> -->
@@ -13,11 +11,11 @@
 	<div id ="wrap">
 		<section id ="navSection">
 			<div id ="page-all" class ="active">
-				<header>
-					<span id ="num" data-num="0"> 条笔记</span>
-					
-					<button onclick ="util.localTimeFromUTC()">添加笔记</button>
-				</header>
+				<div id ="gbx1"></div>
+				<div id ="gbx2">
+					<span id ="forget-text" >备忘录</span>					
+					<button id="add_note" onclick ="note.addNote()">添加笔记</button>
+				</div>
 				<nav id ="nav">
 					<ul id ="note-id">
 						<li class ="title focus empty" data-id ="-1">
@@ -25,15 +23,18 @@
 								<span>新笔记</span>
 								<time>6月3日</time> 
 							</h1>
+						</li>
 					</ul>
-					<div id ="search">
-						<input type ="search" results ="5" placeholder =" Search..." name ="Search">
-					</div>
-					<div id ="loadOldNotes">
-						<span class ="button"> load more</span>
-						<span class ="loading "></span>
-					 </div>
 				</nav>
+				<div id ="search_box">
+					<input type ="search" class ="sInput" placeholder =" Search..." name ="Search">
+					<button id ="kw_search" class="top_btn_search" >搜索</button>
+				</div>
+				<div id ="loadOldNotes">
+					<span class ="button"> load more</span>
+					<span class ="loading "></span>
+				</div>
+				
 			</div>
 		</section>
 		<section id ="noteSection"> 

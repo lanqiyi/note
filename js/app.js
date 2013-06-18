@@ -86,7 +86,7 @@ var util = {
 		else{
 			e = e || document;
 			var cur = e.firstChild;
-	
+
 			// If we had a bad node, there's not much we can do.
 			if(!e)
 				return;

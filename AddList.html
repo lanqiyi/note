@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn" lang="zh-cn">
+<head>
+<title>测试</title>
+<meta charset ="utf-8">
+</head>
+<body>
+ <input id="myInput1" type="text" value="在这里添加一点文字吧!" size="36"/>
+ <input type="button" value="添加文字" onclick="addText()"/>
+ <br>
+ <p id="myText">这是标记p，可以改变这里的文字</p>
+ 
+ <input id="myInput2" typr="text" size="36"/>
+ <input type="button" value="用innerHTML方法添加列表项" onclick="addListItem()"/>
+ <br/>
+ 
+ <ul id="myList">
+  <li>导航菜单1</li>
+  <li>导航菜单2</li>
+  <li>导航菜单3</li>
+  </ul>
+  <br/>
+  
+  <input type="file"/>
+  <br/>
+  <br/>
+  
+  <input id="myInput3" typr="text" size="36"/>
+ <input type="button" value="添加新HTML标签" onclick="addNewTag()"/>
+ <br/>
+ <br/>
+</body>
+<script language="javascript" type="text/javascript">
+ //添加文本
+ function addText()
+ {
+  var p = document.getElementById("myText");
+  var text = document.getElementById("myInput1").value;
+  if(text.length == 0)
+  {
+   alert("请输入文字！");
+  }
+  else
+  {
+   p.innerHTML = text;
+  }
+ }
+ 
+ //添加列表项
+ function addListItem()
+ {
+  //获取对象
+  var list = document.getElementById("myList");
+  var text = document.getElementById("myInput2").value;
+  if(text.length == 0)
+  {
+   alert("请输入文字！");
+  }
+  else
+  {
+   //给ul列表添加新项
+   list.innerHTML += "<li>" + text + "</li>";
+  }
+ }
+ 
+ //添加新标签
+ function addNewTag()
+ {
+  var text = document.getElementById("myInput3").value;
+  if(text.length == 0)
+  {
+   alert("请输入文字！");
+  }
+  else
+  {
+   var newTag = document.getElementById("myNewList");
+   //是否已经存在
+   if(!newTag)
+   {
+     //创建一个新ul标签
+     var newTag = document.createElement("ul");
+     //设置id
+     newTag.setAttribute("id", "myNewList");
+     //将新标签添加到页面中
+     document.body.appendChild(newTag);
+     //为标签添加文本
+     newTag.innerHTML += "<li>" + text + "</li>";
+    }
+    else
+    {
+     //创建一个新列表项li
+     var newItem = document.createElement("li");
+     //为列表项添加文本
+     newItem.appendChild(document.createTextNode(text));
+     newTag.appendChild(newItem);
+     
+     //方法二：使用innerHTML添加列表项
+     newTag.innerHTML += "<li>innerHTML方法添加一项</li>";
+    }
+  }
+ }
+</script>
+</html>
