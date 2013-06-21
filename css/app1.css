@@ -1,4 +1,4 @@
-#gbx1, #gbx2 {
+/*#gbx1, #gbx2 {
 
 	background-color: #FFEBCD;
 	background-image: none;
@@ -17,11 +17,19 @@
 }
 #gbx1{
 	right:0;
+}*/
+#gbx2 {
+	
+	line-height: 38px;
+	text-align: center;
+	overflow: hidden;
 }
 #forget-text{
 	position:relative;
 	font-size:16px;
 	font-weight: bold;
+	font-family:Georgia;
+	color: #FDFFFF;
 
 }
 

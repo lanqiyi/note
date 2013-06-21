@@ -17,7 +17,7 @@ var util = {
 		var getcurrentDate = mydate.getDate();
 		var getcurrentMonth =mydate.getMonth()+1;
 		var showDate = getcurrentMonth+"月"+getcurrentDate+"日"; 
-		alert(showDate);
+		//alert(showDate);
 		return showDate;
 	}
 };
@@ -28,7 +28,8 @@ var note = {
 		var p = document.getElementById("note-id");
 
 		p.innerHTML += '<li class = "title" data-id = ' +row.id +'><h1> <span>'+row.title+'</span> <time>'+util.localTimeFromUTC()+'</time></h1></li>';
-		alert("OK");
+		window.open('NoteEdit.html','_blank');
+		alert(ok);
 	}
 	
 };

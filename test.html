@@ -2,19 +2,21 @@
 <html>
 <head>
 	<link rel ="stylesheet" type ="text/css" href ="css/app1.css" media ="all"> 
+	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
 	<meta charset ="utf-8">
 	<title>记事本</title>
 </head>
 <body>
 	<!--<script type ="text/javascript" src ="js/cga.js"> </script> -->
 	<script type ="text/javascript" src ="js/app1.js"> </script>
+	 <script src="bootstrap/js/bootstrap.min.js"></script>
 	<div id ="wrap">
 		<section id ="navSection">
 			<div id ="page-all" class ="active">
 				<div id ="gbx1"></div>
 				<div id ="gbx2">
 					<span id ="forget-text" >备忘录</span>					
-					<button id="add_note" onclick ="note.addNote()">添加笔记</button>
+					<button id="add_note" class="btn btn-primary btn-large" onclick ="note.addNote()">添加笔记</button>
 				</div>
 				<nav id ="nav">
 					<ul id ="note-id">

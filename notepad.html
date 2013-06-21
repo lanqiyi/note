@@ -1,41 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+	<link rel ="stylesheet" type ="text/css" href ="css/app1.css" media ="all"> 
+	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
 	<meta charset ="utf-8">
 	<title>记事本</title>
-	<!--<link rel ="stylesheet" type ="text/css" href ="css/app1.css" media ="all"> -->
-	<!--<link rel ="stylesheet" type ="text/css" href ="css/text.css" media ="all">-->
-	<!--<script type ="text/javascript" src ="js/myFunction.js"> </script> -->
 </head>
 <body>
 	<!--<script type ="text/javascript" src ="js/cga.js"> </script> -->
 	<script type ="text/javascript" src ="js/app1.js"> </script>
-	<div id ="wrap">
-		<section id ="navSection">
-			<div id ="page-all" class ="active">
-				<header>
-					<span id ="num" data-num="0"> 条笔记</span>
-					
-					<button onclick ="util.localTimeFromUTC()">添加笔记</button>
-				</header>
-				<nav id ="nav">
-					<ul id ="note-id">
-						<li class ="title focus empty" data-id ="-1">
-							<h1>
-								<span>新笔记</span>
-								<time>6月3日</time> 
-							</h1>
-					</ul>
-					<div id ="search">
-						<input type ="search" results ="5" placeholder =" Search..." name ="Search">
+	 <script src="bootstrap/js/bootstrap.min.js"></script>
+	 <!--<script src="http://code.jquery.com/jquery.js"></script>-->
+	
+	<div id ="page-all" class ="section1">
+			<div class= "navbar navbar-inverse navbar-fixed-top">
+				<div id ="gbx1" class="navbar-inner">
+					<div id ="gbx2" >
+						<span id ="forget-text" >备忘录</span>	
+						<div class="navbar-form pull-right">				
+						<button id="add_note" class="btn" onclick ="note.addNote()">添加笔记</button>
 					</div>
-					<div id ="loadOldNotes">
-						<span class ="button"> load more</span>
-						<span class ="loading "></span>
-					 </div>
-				</nav>
+					</div>
+				</div>		
+				<div id ="notelist">
+					<ul id ="note-id">
+					</ul>
+				</div>
+				<div id ="loadOldNotes">
+					<span class ="button"> load more</span>
+					<span class ="loading "></span>
+				</div>
+				<div id ="search_box">
+					<input type ="search" class ="sInput" placeholder =" Search..." name ="Search">
+					<button id ="kw_search" class="top_btn_search" >搜索</button>
+				</div>
 			</div>
-		</section>
+		
 		<section id ="noteSection"> 
 			<div id ="noteWrapper">
 				<div id ="top" >
@@ -54,7 +54,7 @@
 				</article>
 			</div>
 		</setion>
-	</div>
+	
 </body>	
 </html>						
 					
