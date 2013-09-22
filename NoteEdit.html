@@ -3,19 +3,28 @@
 <meta name ="viewport" content ="width =device-width, initial-scale =1.0" charset ="utf-8">
 	<!--Bootstrap-->
 <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link rel ="stylesheet" type ="text/css" href ="css/app1.css" media ="all"> 
 <title>新增笔记</title>
 <body>
-	<div class ="navbar-inner">
-		<div class ="container">
-			<div id ="gbx2" >
-				<span id ="forget-text" >新建记事</span>	
-			</div>
-			<div id = "handle">
-				<span class ="icon-bar" id ="remove"></span>	
-				<span class ="icon-bar" id ="save"></span>
+	<script type ="text/javascript" src ="js/app1.js"> </script>
+	 <script src="bootstrap/js/bootstrap.min.js"></script>
+	 <div class= "navbar navbar-inverse navbar-fixed-top">
+		<div class ="navbar-inner">
+			<div class ="container">
+				<div id ="gbx2" >
+					<span id ="forget-text" >新建记事</span>
+				</div>
 			</div>
 		</div>
 	</div>
-<textarea rows ="3">有了记事本，我再也不会忘事了</textarea>
+	<textarea  id="text" rows ="3">有了记事本，我再也不会忘事了</textarea>
+	<div id = "handle">
+			<span class ="icon-bar" id ="remove"></span>
+			<span class ="icon-bar" id ="save" ></span>
+			<button class="btn" onclick="">保存</button>	
+	</div>
+	<footer>
+	<p>@minzhao 2013</p>
+	</footer>
 </body>
 </html>
