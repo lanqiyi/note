@@ -31,10 +31,19 @@ var note = {
 		window.open('NoteEdit.html','_blank');
 		alert(ok);
 	}
-	
+
 };
 var row ={
 	id :1,
 	title :"new note",
 
+};
+
+var editnote ={
+	 save:function(){
+	 	var NoteContent = document.getElementById("text")[0];
+	 	var y =NoteContent.childNodes[0];
+	 	txt=y.nodeValue;
+	 	alert(txt);
+	 }
 }
