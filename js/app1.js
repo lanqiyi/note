@@ -41,9 +41,9 @@ var row ={
 
 var editnote ={
 	 save:function(){
-	 	var NoteContent = document.getElementById("text")[0];
-	 	var y =NoteContent.childNodes[0];
-	 	txt=y.nodeValue;
-	 	alert(txt);
+	 	var NoteContent = document.getElementById("text").value;
+	 	localStorage.NoteContent=NoteContent;
+	 	//document.write(localStorage.NoteContent);
+	 	alert(NoteContent);
 	 }
 }
