@@ -30,6 +30,14 @@ var note = {
 		p.innerHTML += '<li class = "title" data-id = ' +row.id +'><h1> <span>'+row.title+'</span> <time>'+util.localTimeFromUTC()+'</time></h1></li>';
 		window.open('NoteEdit.html','_blank');
 		alert(ok);
+	},
+	SaveNote:function(){
+		var NoteContent = document.getElementById("text").value;
+
+		localStorage.setItem ('NoteContent', NoteContent);
+	 	//localStorage.NoteContent=NoteContent;
+	 	//document.write(localStorage.NoteContent);
+	 	alert(localStorage.getItem('NoteContent'));
 	}
 
 };
@@ -39,11 +47,5 @@ var row ={
 
 };
 
-var editnote ={
-	 save:function(){
-	 	var NoteContent = document.getElementById("text").value;
-	 	localStorage.NoteContent=NoteContent;
-	 	//document.write(localStorage.NoteContent);
-	 	alert(NoteContent);
-	 }
-}
+
+

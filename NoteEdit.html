@@ -7,6 +7,7 @@
 <title>新增笔记</title>
 <body>
 	<script type ="text/javascript" src ="js/app1.js"> </script>
+	<script type ="text/javascript" src ="js/storage.js"> </script>
 	 <script src="bootstrap/js/bootstrap.min.js"></script>
 	 <div class= "navbar navbar-inverse navbar-fixed-top">
 		<div class ="navbar-inner">
@@ -17,11 +18,11 @@
 			</div>
 		</div>
 	</div>
-	<textarea  id="text" rows ="3">有了记事本，我再也不会忘事了</textarea>
+	<textarea  id="text" rows ="3" >有了记事本，我再也不会忘事了</textarea>
 	<div id = "handle">
 			<span class ="icon-bar" id ="remove"></span>
 			<span class ="icon-bar" id ="save" ></span>
-			<button class="btn" onclick="editnote.save()">保存</button>	
+			<button class="btn" onclick="note.SaveNote()">保存</button>	
 	</div>
 	<footer>
 	<p>@minzhao 2013</p>
