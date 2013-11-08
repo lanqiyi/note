@@ -38,6 +38,10 @@ var note = {
 	 	//localStorage.NoteContent=NoteContent;
 	 	//document.write(localStorage.NoteContent);
 	 	alert(localStorage.getItem('NoteContent'));
+	},
+	function cls(){
+		with(event.srcElement)
+		if(value == defaultValue) value= "";
 	}
 
 };
