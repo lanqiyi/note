@@ -4,10 +4,12 @@
 	<!--Bootstrap-->
 <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
 <link rel ="stylesheet" type ="text/css" href ="css/app1.css" media ="all"> 
+<script type  ="text/javascript" src ="js/jquery.js"></script>
 <title>新增笔记</title>
 <body>
 	<script type ="text/javascript" src ="js/app1.js"> </script>
 	<script type ="text/javascript" src ="js/storage.js"> </script>
+
 	 <script src="bootstrap/js/bootstrap.min.js"></script>
 	 <div class= "navbar navbar-inverse navbar-fixed-top">
 		<div class ="navbar-inner">
@@ -18,14 +20,14 @@
 			</div>
 		</div>
 	</div>
-	<textarea  id="text" rows ="3" >有了记事本，我再也不会忘事了</textarea>
-	<div id = "handle">
-			<span class ="icon-bar" id ="remove"></span>
-			<span class ="icon-bar" id ="save" ></span>
-			<button class="btn" onclick="note.SaveNote()">保存</button>	
-	</div>
+	<from name ="frmtext" id ="frmtext"  method ="post" action =" ">
+		<div class ="text_boxer">
+			<textarea  name ="text_area" id="text_area" class='kw' rows ="3" style="color:rgb(153,153,153);" onfocus ="if(value ==defaultValue){value =''}" onblur ="if(value ==''){value ='有了记事本，我再也不会忘事了'}">有了记事本，我再也不会忘事了</textarea>
+		</div>
+		<input type ="submit" value ="保存" />
+	</form>
 	<footer>
 	<p>@minzhao 2013</p>
 	</footer>
 </body>
-</html>
+</html>s

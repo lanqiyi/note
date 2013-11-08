@@ -32,6 +32,8 @@
 	font-family:Georgia;
 	color: #FDFFFF;
 	
+	text-align:center;
+	
 }
 
 #search_box{
@@ -49,8 +51,12 @@ height: 20px;
 margin-top:4px;
 
 }
-#text{
+.kw {
 	margin-top: 2cm;
+	font-size: 14px;
+	width: 440px;
+	line-height: 20px;
+	
 }
 #remove {
 	
